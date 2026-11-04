@@ -1,14 +1,14 @@
-# TP-Python-C15
+# Lab_Final_C_Grupo11
 
-# Trabajo Final Integrador - Laboratorio de Python
+# Trabajo Final Integrador - Laboratorio de C
 
 ## Integrantes
 
-* Fabrizio Ezequiel Gutierrez
-* Alex Gabriel Merlo
-* Maria Sasha Fiona Gimenez
-* Alvarez Carruega, Julián Nicolás
-* Garcia Edgardo Raul
+* Cuenca Danna
+* Duarte Santiago
+* Fernandez Eugenia
+* Gutierrez Fabrizio
+* Suarez Mauro
 
 ## Comisión
 
@@ -16,60 +16,57 @@ ISI - Comisión C
 
 ## Descripción del Proyecto
 
-Sistema "TrabajoC15".
+Sistema "---". // Nombrar mas tarde
 
-El objetivo del sistema es gestionar un estacionamiento con todas las funciones que esto conlleva, con esto nos referimos a controlar el ingreso y egreso de vehiculos, medir el tiempo de permanencia de los mismos, tener registro de la cantidad de espacios disponibles para estacionar y calcular los importes a pagar de cada vehiculo.
+El objetivo del sistema es responder una serie de preguntas relacionadas con la Inserción y Estabilidad en Órbita Terrestre Baja de la nave Orión perteneciente a la misión ARTEMIS
+// Desarrollar mas esta parte
 
 Principales funcionalidades:
 
-* Control de ingreso y egreso de vehiculos
-* Registro del tiempo de permanencia de los vehiculos
-* Registro de la cantidad de espacios disponibles para estacionar
-* Calculo de importes en relacion al tiempo de estacionado y al tipo de vehiculo
+* Demostración analítica de que la fuerza de atracción gravitatoria actúa como la fuerza centrípeta del sistema
+* Calculo del módulo de la velocidad orbital v
+* Calculo de los segundos y minutos le toma a la nave Orion completar una vuelta completa alrededor de la Tierra
+* Calculo de la aceleración centrípeta que experimentan los astronautas dentro de la cápsula a partir de la altitud dada por el problema
+* Descripcion de la trayectoria resultante tras encender un propulsor auxiliar
+* Calculo de la desviación lateral instantánea
+
 
 ## Tecnologías Utilizadas
 
-* Python 3.14.6
+* C //Buscar información sobre la version utilizada
 * GitHub
 * Consola de comandos
 * VsCode 
 
 ## Instrucciones de Ejecución
 
-1. Descargar o clonar el repositorio.
-2. Ejecutar: ``gestion de estacionamiento.exe`.
-4. Seguir las opciones mostradas por el menú.
+// Añadir despues
 
 ## Distribución de Tareas
 
 | Integrante   | Responsabilidad             |
 | ------------ | --------------------------- |
-| Gutierrez, Fabrizio | Menú principal y navegación |
-| Garcia Edgardo Raul | Validaciones                |
-| Alex Gabriel Merlo | Funciones principales e interfaz grafica       |
-| Maria Sasha Fiona Gimenez | Estadísticas                |
-| Alvarez Carruega, Julián Nicolás | Pruebas y documentación     |
+| Cuenca Danna | --------------------------- |
+| Duarte Santiago | -----------------------  |
+| Fernandez Eugenia | ---------------------- |
+| Gutierrez Fabrizio | --------------------- |
+| Suarez Mauro | --------------------------- |
+
+//Agregar despues
 
 ## Uso de Inteligencia Artificial
 
 Herramienta utilizada:
 
 * Claude
-* Github spec-kit
+* Gemini
 
 Uso realizado:
 
-* Generación de ideas para la estructura del sistema.
-* Resolución de dudas sobre Python.
-* Revisión y corrección de errores.
-* Sugerencias de modularización del código.
-* GitHub SpecKit se utilizo para generar modelos con situaciones similares y asi poder aprender sobre la utilizacion de funciones y/o procedimientos.
+* // agregar despues
 
 Todas las respuestas obtenidas fueron analizadas, adaptadas y verificadas por los integrantes antes de incorporarlas al proyecto.
 
 ## Posibles Mejoras Futuras
 
-* Persistencia de datos en archivos.
-* Interfaz gráfica.(resuelto)
-* Reportes más completos.(resuelto)
-  
+// ninguna, primero hacer el trabajo

@@ -1,0 +1,47 @@
+Demuestre analíticamente que la fuerza de atracción gravitatoria actúa como la fuerza centrípeta del sistema y calcule el módulo de la velocidad orbital v necesaria para mantener dicha órbita circular.
+
+    Para demostrar analiticamente que la fuerza de atraccion gravitatoria actua como la fuerza centripeta del sistema hay que plantear la formula de la ley de gravitación universal de Newton para la fuerza de atracción entre la Tierra y la nave
+         
+         Fg = G . ((Mt . M_orion)/r^2) // En C: double Fg = G * ((Mt * M_orion) / (r * r))
+    
+    Tambien hay que plantear la formula de la fuerza centrípeta que mantiene a la nave en órbita circular alrededor de la Tierra manteniendo el MCU
+
+        Fc = m_orion . (v^2 / r) // En C: double Fc = M_orion * ((v * v) / r)
+    
+    Y al finalizar igualamos ambas fuerzas para demostrar que la fuerza de atracción gravitatoria actúa como la fuerza centrípeta del sistema debido a que al encontrarse la nave en órbita libre bajo la acción exclusiva de la gravedad, la única fuerza horizontal/radial neta que actúa sobre ella es la fuerza gravitacional. Por lo tanto, se igualan ambas fuerzas
+
+        Fg = Fc => G . ((Mt . M_orion)/r^2) = M_orion . (v^2 / r) // En C: G * ((Mt * M_orion) / (r * r)) = M_orion * ((v * v) / r)
+
+    A partir de esta igualdad, podemos despejar la velocidad orbital v necesaria para mantener la órbita circular, simplificando la masa de la nave (M_orion) en ambos lados de la ecuación (lo que demuestra que la velocidad orbital no depende de la masa de la nave)
+
+        G . (Mt / r^2) = v^2 / r // En C: G * (Mt / (r * r)) = (v * v) / r
+        G . (Mt / r) = v^2       // En C: G * (Mt / r) = (v * v)
+        v = V¨¨(G . Mt / r)    // En C: v = sqrt(G * Mt / r)
+    
+    Y entonces obtenemos el valor de la velocidad orbital (v)
+
+¿Cuántos segundos y minutos le toma a la nave Orion completar una vuelta completa (período orbital T) alrededor de la Tierra?
+
+    Lo primero que hacemos en este caso es calcular el período orbital T el cual corresponde al tiempo que toma la nave para completar una vuelta completa alrededor de la Tierra, despejandolo de la fórmula de la velocidad orbital (v = (2 * π * r) / T), donde r es el radio de la órbita y T es el período orbital
+         
+         T = (2 . π . r) / v // En C: double T = (2 * M_PI * r) / v;
+    
+    Y debido a las unidades en las que estamos trabajando, el resultado de T estará en segundos. Para convertirlo a minutos, simplemente dividimos el resultado entre 60.
+
+         T_minutos = T / 60 // En C: double T_minutos = T / 60; (no es necesario definir una nueva variable, se puede hacer directamente en la impresión del resultado)
+    
+Calcule el módulo de la aceleración centrípeta que experimentan los astronautas dentro de la cápsula a esa altitud.
+
+    La aceleración centrípeta (Ac) que experimentan los astronautas dentro de la cápsula se puede calcular utilizando la fórmula de la aceleración centrípeta, que está relacionada con la velocidad orbital y el radio de la órbita
+
+        Ac = v^2 / r // En C: double Ac = (v * v) / r;
+
+    O tambien se puede igualar la aceleracion centrípeta con la ley de gravitación universal (simplificando la masa de la nave) para obtener la aceleración centrípeta en función de la constante gravitacional, la masa de la Tierra y el radio de la órbita
+
+        Ac = G . Mt / r^2 // En C: double Ac = (G * Mt) / (r * r);
+
+Si durante la órbita la nave enciende un propulsor auxiliar lateral que genera un pulso de aceleración a = 0,50 m/s² constante y perpendicular a su velocidad orbital durante Δt = 10,0 s, describa la trayectoria resultante y calcule la desviación lateral instantánea.
+
+     hay que tener en cuenta que la trayectoria resultante de la nave se verá afectada por la aceleración lateral generada por el propulsor auxiliar. Dado que la aceleración es constante y perpendicular a la velocidad orbital, la nave seguirá una trayectoria curva en lugar de una órbita circular perfecta. esta trayectoria causa una desviación lateral de la nave la cual se calcula con la siguiente fórmula de movimiento rectilíneo uniformemente acelerado (MRUA) // buscar mejores definiciones
+
+        d = 0,5 . a . (t2 - t1)^2 // En C: double d = 0.5 * a * ((t2 - t1) * (t2 - t1));

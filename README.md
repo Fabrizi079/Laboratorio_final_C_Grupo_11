@@ -16,10 +16,9 @@ ISI - Comisión C
 
 ## Descripción del Proyecto
 
-Sistema "---". // Nombrar mas tarde
+Sistema "ARTEMIS - ORION EN ORBITA TERRESTRE BAJA"
 
-El objetivo del sistema es responder una serie de preguntas relacionadas con la Inserción y Estabilidad en Órbita Terrestre Baja de la nave Orión perteneciente a la misión ARTEMIS
-// Desarrollar mas esta parte
+El objetivo del sistema es responder una serie de preguntas relacionadas con la Inserción y Estabilidad en Órbita Terrestre Baja de la nave Orión perteneciente a la misión ARTEMIS, además de incluir un juego didáctico en el cual //completar mas tarde
 
 Principales funcionalidades:
 
@@ -33,7 +32,7 @@ Principales funcionalidades:
 
 ## Tecnologías Utilizadas
 
-* C //Buscar información sobre la version utilizada
+* C versión C17
 * GitHub
 * Consola de comandos
 * VsCode 
@@ -46,11 +45,11 @@ Principales funcionalidades:
 
 | Integrante   | Responsabilidad             |
 | ------------ | --------------------------- |
-| Cuenca Danna | --------------------------- |
-| Duarte Santiago | -----------------------  |
-| Fernandez Eugenia | ---------------------- |
-| Gutierrez Fabrizio | --------------------- |
-| Suarez Mauro | --------------------------- |
+| Cuenca Danna | Encargada de la investigación del complemento teórico |
+| Duarte Santiago | Encargado de la revisión de errores y la edición de video |
+| Fernandez Eugenia | Encargada del control de la interfaz con el usuario |
+| Gutierrez Fabrizio | Encargado del cuerpo del Main y de la implementación de los datos fisicos |
+| Suarez Mauro | Encargado del modo de Juego y de las validaciones |
 
 //Agregar despues
 
@@ -61,12 +60,11 @@ Herramienta utilizada:
 * Claude
 * Gemini
 
-Uso realizado:
+Casos en donde fue utilizada
 
-* // agregar despues
-
+* Revisión y corrección de errores
 Todas las respuestas obtenidas fueron analizadas, adaptadas y verificadas por los integrantes antes de incorporarlas al proyecto.
 
 ## Posibles Mejoras Futuras
 
-// ninguna, primero hacer el trabajo
+* añadir una interfaz grafica que complemente el juego

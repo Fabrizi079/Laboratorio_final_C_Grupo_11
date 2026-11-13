@@ -16,9 +16,9 @@ ISI - Comisión C
 
 ## Descripción del Proyecto
 
-Sistema "ARTEMIS - ORION EN ORBITA TERRESTRE BAJA"
+Programa "ARTEMIS - ORION EN ORBITA TERRESTRE BAJA"
 
-El objetivo del sistema es responder una serie de preguntas relacionadas con la Inserción y Estabilidad en Órbita Terrestre Baja de la nave Orión perteneciente a la misión ARTEMIS, además de incluir un juego didáctico en el cual //completar mas tarde
+El objetivo de este programa es responder una serie de preguntas relacionadas con la Inserción y Estabilidad en Órbita Terrestre Baja de la nave Orión perteneciente a la misión ARTEMIS, además de incluir un juego didáctico en el cual //completar mas tarde
 
 Principales funcionalidades:
 

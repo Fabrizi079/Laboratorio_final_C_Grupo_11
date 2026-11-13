@@ -63,13 +63,15 @@ El programa calcula, para los datos ingresados por el usuario:
 ## Instrucciones de Ejecución
 Se ingresa en la consola de comandos:
 
+```bash
 make          
-./artemis     
+./artemis    
 make clean
+```
 
 Para una compilación manual se debe ingresar todo el siguiente comando: 
 
-gcc -Wall -Wextra -std=c99 -o artemis main.c artemis.c validaciones.c -lm
+`gcc -Wall -Wextra -std=c99 -o artemis main.c artemis.c validaciones.c -lm`
 
 ## Distribución de Tareas
 

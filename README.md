@@ -18,7 +18,7 @@ ISI - Comisión C
 
 Programa "ARTEMIS - ORION EN ORBITA TERRESTRE BAJA"
 
-El objetivo de este programa es responder una serie de preguntas relacionadas con la Inserción y Estabilidad en Órbita Terrestre Baja de la nave Orión perteneciente a la misión ARTEMIS, además de incluir un juego didáctico en el cual //completar mas tarde
+El objetivo de este programa es responder una serie de preguntas relacionadas con la Inserción y Estabilidad en Órbita Terrestre Baja de la nave Orión perteneciente a la misión ARTEMIS, además de incluir un juego didáctico en el cual el usuario simula el lanzamiento de naves a la orbita terrestre, ingresando valores de velocidad los cuales deben encontrarse dentro del rango aceptable en relación también con los otros valores que el juego brinda, y sumando puntos cuando los valores de velocidad se encuentren dentro de este rango
 
 Principales funcionalidades:
 
@@ -28,6 +28,7 @@ Principales funcionalidades:
 * Calculo de la aceleración centrípeta que experimentan los astronautas dentro de la cápsula a partir de la altitud dada por el problema
 * Descripcion de la trayectoria resultante tras encender un propulsor auxiliar
 * Calculo de la desviación lateral instantánea
+* Enseñanza de estos conceptos mediante el uso de un enfoque mas lúdico basado en el juego
 
 
 ## Tecnologías Utilizadas
@@ -37,9 +38,38 @@ Principales funcionalidades:
 * Consola de comandos
 * VsCode 
 
-## Instrucciones de Ejecución
+## Funcionamiento y arquitectura
+| Archivo | Responsabilidad |
+|---|---|
+| main.c | Menu principal y flujo general |
+| artemis.h | Constantes, structs (Orbita, PulsoLateral, Turno, Mision)|
+| artemis.c | Calculos fisicos, logica de turnos, reportes |
+| validaciones.h/.c | Lectura de los valores y envió de mensajes de error |
 
-// Añadir despues
+## Escenario y reglas del juego
+La nave Orion (33.000 kg) orbita la Tierra en un MCU a h = 192 km (r = RT + h = 6.563 km).
+El programa calcula, para los datos ingresados por el usuario:
+- Velocidad orbital `v = sqrt(G*MT/r)` y demostracion de que la gravedad es la fuerza centripeta.
+- Periodo orbital `T = 2*pi*r/v`.
+- Aceleracion centripeta `a = v^2/r`.
+- Pulso lateral: `dv = a*dt`, desviacion `d = 1/2*a*dt^2`, y descripcion de la trayectoria.
+
+**Modo Misión (juego por turnos):** en cada turno se brinda una altitud al azar para la cual el jugador debe calcular e ingresar la velocidad de inyección. Hay una perturbación aleatoria de hasta +-0,3 %.
+- Error <= 1 %: orbita circular estable (100 pts).
+- Error <= 5 %: orbita eliptica aceptable (40 pts).
+- Menor a -5 %: la orbita decae. Mayor a +5 %: orbita muy excentrica. >= sqrt(2)*v: escape.
+- Se gana con 3 orbitas estables dentro de 6 turnos.
+
+## Instrucciones de Ejecución
+Se ingresa en la consola de comandos:
+
+make          
+./artemis     
+make clean
+
+Para una compilación manual se debe ingresar todo el siguiente comando: 
+
+gcc -Wall -Wextra -std=c99 -o artemis main.c artemis.c validaciones.c -lm
 
 ## Distribución de Tareas
 
@@ -51,8 +81,6 @@ Principales funcionalidades:
 | Gutierrez Fabrizio | Encargado del cuerpo del Main y de la implementación de los datos fisicos |
 | Suarez Mauro | Encargado del modo de Juego y de las validaciones |
 
-//Agregar despues
-
 ## Uso de Inteligencia Artificial
 
 Herramienta utilizada:
@@ -60,10 +88,9 @@ Herramienta utilizada:
 * Claude
 * Gemini
 
-Casos en donde fue utilizada
+Casos en donde fue utilizada:
 
-* Revisión y corrección de errores
-Todas las respuestas obtenidas fueron analizadas, adaptadas y verificadas por los integrantes antes de incorporarlas al proyecto.
+// Agregar despues
 
 ## Posibles Mejoras Futuras
 

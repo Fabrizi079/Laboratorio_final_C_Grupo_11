@@ -59,9 +59,9 @@ static void jugarMision(Mision *m) {
 
         printf("\n--- TURNO %d de %d | estables: %d/%d | puntaje: %d ---\n",
                t->numero, MAX_TURNOS, m->estables, OBJETIVO_ESTABLES, m->puntaje);
-        printf("Altitud de inyeccion : %.0f km\n", t->orbita.altitud / 1000.0);
-        printf("Radio orbital        : %.1f km\n", t->orbita.radio / 1000.0);
-        printf("Masa de la nave      : %.0f kg\n", t->orbita.masa_nave);
+        printf("Constante de gravitacion : 6,6743 x 10^-11 m^3/(kg x s^2)\n");
+        printf("Masa de la Tierra        : 5,972 x 10^24 kg\n");
+        printf("Radio orbital            : %.1f m\n", t->orbita.radio);
 
         v = leerDouble("Velocidad de inyeccion en m/s (1000 a 15000): ", 1000.0, 15000.0);
         resolverTurno(m, v);
